@@ -44,7 +44,7 @@ class LogInForm extends Component {
 
     const response = await fetch(logInApiUrl, options)
     const data = await response.json()
-    if (response.of === true) {
+    if (response.ok === true) {
       this.onsubmitSuccess(data.jwt_token)
     } else {
       this.onSubmitFailure(data.error_msg)
